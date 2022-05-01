@@ -25,9 +25,16 @@ const App = () => {
         },
       ];
 
+      //this function handles the object from <NewExpense/>
+      //the parameter expense is the object from <NewExpense/>
+      const addExpenseHandler = (expense) => {
+        console.log('In App.js');
+        console.log(expense);
+      }
+
     return (
         <div>
-            <NewExpense />
+            <NewExpense onAddExpenseHandler={addExpenseHandler}/> {/**this handles object passed from the <NewExpense/> */}
             <Expenses items={expenses} />
         </div>
     );
